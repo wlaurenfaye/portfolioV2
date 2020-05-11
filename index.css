@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+body {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 2rem;
+  min-height: 100vh;
+}
+.box1{
+  height: 100vh;
+  background-color: lightpink;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+.box1 a {
+  text-decoration: none;
+  color: white;
+}
+.box2{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: orange;
+  text-decoration: none;
+}
+.box2 a {
+  text-decoration: none;
+  color: white;
+}
