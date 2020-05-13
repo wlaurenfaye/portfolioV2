@@ -599,3 +599,7 @@ tutorial complete
 12:04 11/05/2020 
 started working on version 2 of my portfolio to add js
 followed smooth scroll tutorial successfully
+
+15:20 13/05/2020
+adding js nav bar to new portfolio, styled bar, took longer than it should but learned more css so good i guess
+to add js nexttime
