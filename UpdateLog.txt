@@ -576,7 +576,7 @@ https://www.youtube.com/watch?v=Ttf3CEsEwMQ
 styled list
 added function to add todo item
 added function to delete button
-https://www.youtube.com/watch?v=Ttf3CEsEwMQ
+https://www.youtube.com/watch?v=Ttf3CEsEwMQs
 
 11:06 06/05/2020
 added checked function with animations by adding a class and event listener then removing the item 
@@ -603,3 +603,6 @@ followed smooth scroll tutorial successfully
 15:20 13/05/2020
 adding js nav bar to new portfolio, styled bar, took longer than it should but learned more css so good i guess
 to add js nexttime
+
+18:42 14/05/2020
+quick sesh, fixed issue with collapsed icon with new styling
