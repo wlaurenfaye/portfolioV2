@@ -609,3 +609,6 @@ quick sesh, fixed issue with collapsed icon with new styling
 
 16:16 15/05/2020
 finished nav js and learned some js animation, will add comments for the js on monday to make sure i actually know it c:
+
+14:52 18/05/2020
+added sticky nav bar and another section, going to rewrite the js tomorrow to work with the nav and sections

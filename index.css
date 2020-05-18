@@ -3,11 +3,13 @@
   padding: 0;
   box-sizing: border-box;
 
+
 }
 body {
   font-family: 'Roboto Mono', monospace;
   font-size: 2rem;
   min-height: 100vh;
+
 }
 .box1{
   height: 100vh;
@@ -22,14 +24,28 @@ body {
   color: white;
 }
 .box2{
+  height: 95vh;
+  display: flex;
+  background:  #E1B378;
+  text-decoration: none;
+justify-content: center;
+  overflow: hidden;
+}
+.box2 a {
+  text-decoration: none;
+  color: white;
+  font-size: 3rem;
+  font-weight: bolder;
+}
+.box3{
   height: 100vh;
+  background-color:  #EC799A;
   display: flex;
   justify-content: center;
   align-items: center;
-  background:  #E1B378;
   text-decoration: none;
 }
-.box2 a {
+.box3 a {
   text-decoration: none;
   color: white;
 }
@@ -39,12 +55,12 @@ nav  {
   background-color: #69A583;
   min-height: 5.5vh;
   padding-top: 5px;
-
+  position: sticky;
+  top: 0;
 }
 nav a {
   text-decoration: none;
   color: white;
-
 }
 .nav-links{
     display: flex;
