@@ -612,3 +612,6 @@ finished nav js and learned some js animation, will add comments for the js on m
 
 14:52 18/05/2020
 added sticky nav bar and another section, going to rewrite the js tomorrow to work with the nav and sections
+12:13 20/05/2020
+js now mostly works with nav, problem when going back to a page from lower down?
+look into the function to see if thats causing it

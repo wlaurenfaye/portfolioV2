@@ -24,18 +24,19 @@ body {
   color: white;
 }
 .box2{
-  height: 95vh;
+  height: 100vh;
   display: flex;
   background:  #E1B378;
   text-decoration: none;
-justify-content: center;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
 }
 .box2 a {
   text-decoration: none;
   color: white;
-  font-size: 3rem;
-  font-weight: bolder;
+
+
 }
 .box3{
   height: 100vh;
@@ -46,6 +47,18 @@ justify-content: center;
   text-decoration: none;
 }
 .box3 a {
+  text-decoration: none;
+  color: white;
+}
+.box4{
+  height: 100vh;
+  background-color:  #E1B378;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+.box4 a {
   text-decoration: none;
   color: white;
 }
@@ -135,4 +148,13 @@ li:hover{
     opacity: 1;
     transform: translateX(0px);
   }
+}
+.section1{
+
+}
+.section2{
+
+}
+.section3 {
+
 }

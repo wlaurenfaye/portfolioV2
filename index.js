@@ -25,14 +25,27 @@ function animation(currentTime){
 }
 
 
-var section1 = document.querySelector(".section1");
-var section2 = document.querySelector(".section2");
-section1.addEventListener('click', function(){
-  smoothScroll('.section2', 2000);
+var box1 = document.querySelector(".box1");
+var box2 = document.querySelector(".box2");
+var box3 = document.querySelector(".box3");
+var home = document.getElementById('home');
+var aboutMe = document.getElementById('aboutMe');
+var projects = document.getElementById('projects');
+
+home.addEventListener('click', function(){
+  smoothScroll('.box1', 2000);
 });
 
-section2.addEventListener('click',function(){
-  smoothScroll('.section1', 1500);
+aboutMe.addEventListener('click',function(){
+  smoothScroll('.box2', 1500);
+});
+
+projects.addEventListener('click', function(){
+  smoothScroll('.box3', 1500);
+});
+box1.addEventListener('click', function(){
+  smoothScroll('.box2',1500);
+
 });
 
 /// NAV BAR
