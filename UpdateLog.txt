@@ -615,3 +615,7 @@ added sticky nav bar and another section, going to rewrite the js tomorrow to wo
 12:13 20/05/2020
 js now mostly works with nav, problem when going back to a page from lower down?
 look into the function to see if thats causing it
+
+15:13 26/05/2020
+commented out whole of js have a better understanding now
+going to look into ease function and try to rewrite it to fix the scrolling issue

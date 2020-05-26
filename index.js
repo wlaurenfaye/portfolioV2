@@ -1,16 +1,38 @@
 function smoothScroll(target,duration){
+  //what is clicked on
   var target = document.querySelector(target);
+  
+  //position of target on the window
   var targetPosition = target.getBoundingClientRect().top;
+
+  //starting position of window
   var startPosition = window.pageYOffset;
+
+  //how far it is to get there
   var distance = targetPosition - startPosition;
+
+  //allows for requestAnimationFrame
   var startTime = null;
 
 function animation(currentTime){
+
+  //start time= time it takes for user to click button
+  //current time = how long after that it takes to scroll?
   if (startTime===null) startTime=currentTime;
+
+  //timeElapsed = how long it takes to get to target
   var timeElapsed = currentTime - startTime;
+
+  //run = animation function
+  //paramaters = t b c d
   var run = ease(timeElapsed, startPosition, distance, duration);
-  window.scrollTo(0,run);
-  if(timeElapsed< duration) requestAnimationFrame(animation);
+
+//vertically scroll run function
+  window.scrollTo(0, run);
+
+  //duration = 1500, timeElapsed = how long it takes to get there
+  //dont stop animation untill timeElapsed is over duration
+  if(timeElapsed < duration) requestAnimationFrame(animation);
   }
 //http://gizma.com/easing/
   function ease(t, b, c, d){
@@ -19,8 +41,6 @@ function animation(currentTime){
     t--;
     return -c /2 * (t *(t -2)-1)+b;
   }
-
-
   requestAnimationFrame(animation);
 }
 
@@ -28,12 +48,14 @@ function animation(currentTime){
 var box1 = document.querySelector(".box1");
 var box2 = document.querySelector(".box2");
 var box3 = document.querySelector(".box3");
+var box4= document.querySelector(".box4");
 var home = document.getElementById('home');
 var aboutMe = document.getElementById('aboutMe');
 var projects = document.getElementById('projects');
+var cv = document.getElementById('cv');
 
 home.addEventListener('click', function(){
-  smoothScroll('.box1', 2000);
+  smoothScroll('.box1', 1500);
 });
 
 aboutMe.addEventListener('click',function(){
@@ -43,8 +65,9 @@ aboutMe.addEventListener('click',function(){
 projects.addEventListener('click', function(){
   smoothScroll('.box3', 1500);
 });
-box1.addEventListener('click', function(){
-  smoothScroll('.box2',1500);
+
+cv.addEventListener('click', function(){
+  smoothScroll('.box4',1500);
 
 });
 
