@@ -1,7 +1,7 @@
 function smoothScroll(target,duration){
   //what is clicked on
   var target = document.querySelector(target);
-  
+
   //position of target on the window
   var targetPosition = target.getBoundingClientRect().top;
 
@@ -11,6 +11,8 @@ function smoothScroll(target,duration){
   //how far it is to get there
   var distance = targetPosition - startPosition;
 
+  var home =  document.querySelector(".box1");
+
   //allows for requestAnimationFrame
   var startTime = null;
 
@@ -19,7 +21,7 @@ function animation(currentTime){
   //start time= time it takes for user to click button
   //current time = how long after that it takes to scroll?
   if (startTime===null) startTime=currentTime;
-
+  //if (targetPosition < startPosition)
   //timeElapsed = how long it takes to get to target
   var timeElapsed = currentTime - startTime;
 
@@ -55,21 +57,23 @@ var projects = document.getElementById('projects');
 var cv = document.getElementById('cv');
 
 home.addEventListener('click', function(){
-  smoothScroll('.box1', 1500);
+  smoothScroll('.box1', 2000);
 });
 
 aboutMe.addEventListener('click',function(){
-  smoothScroll('.box2', 1500);
+  smoothScroll('.box2', 2000);
 });
 
 projects.addEventListener('click', function(){
-  smoothScroll('.box3', 1500);
+  smoothScroll('.box3', 2000);
 });
 
 cv.addEventListener('click', function(){
-  smoothScroll('.box4',1500);
+  smoothScroll('.box4',2000);
 
 });
+
+
 
 /// NAV BAR
 

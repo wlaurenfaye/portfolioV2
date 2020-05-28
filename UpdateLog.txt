@@ -619,3 +619,6 @@ look into the function to see if thats causing it
 15:13 26/05/2020
 commented out whole of js have a better understanding now
 going to look into ease function and try to rewrite it to fix the scrolling issue
+
+13:56 28/05/2020
+cant figure out issue with scroll back >:(
