@@ -11,11 +11,11 @@ function smoothScroll(target,duration){
   //how far it is to get there
   var distance = targetPosition - startPosition;
 
-  var home =  document.querySelector(".box1");
 
   //allows for requestAnimationFrame
   var startTime = null;
 
+    console.log("targetPosition" + targetPosition);
 function animation(currentTime){
 
   //start time= time it takes for user to click button
@@ -37,12 +37,15 @@ function animation(currentTime){
   if(timeElapsed < duration) requestAnimationFrame(animation);
   }
 //http://gizma.com/easing/
-  function ease(t, b, c, d){
-    t/= d/2;
-    if (t<1) return c / 2 * t * t + b;
-    t--;
-    return -c /2 * (t *(t -2)-1)+b;
-  }
+function ease (t, b, c, d) {
+	return c*t/d + b;
+
+  // distance * timeElapsed / duration (1500) + startPosition  = targetPosition
+
+
+};
+
+
   requestAnimationFrame(animation);
 }
 
