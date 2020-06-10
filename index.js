@@ -1,6 +1,6 @@
 function smoothScroll(target,duration){
   //what is clicked on
-  var target = document.querySelector(target);
+  var target = document.body.querySelector(target);
 
   //position of target on the window
   var targetPosition = target.getBoundingClientRect().top;
@@ -15,13 +15,13 @@ function smoothScroll(target,duration){
   //allows for requestAnimationFrame
   var startTime = null;
 
-    console.log("targetPosition" + targetPosition);
+
 function animation(currentTime){
 
   //start time= time it takes for user to click button
   //current time = how long after that it takes to scroll?
-  if (startTime===null) startTime=currentTime;
-  //if (targetPosition < startPosition)
+  if (startTime === null) startTime = currentTime;
+
   //timeElapsed = how long it takes to get to target
   var timeElapsed = currentTime - startTime;
 
@@ -29,21 +29,27 @@ function animation(currentTime){
   //paramaters = t b c d
   var run = ease(timeElapsed, startPosition, distance, duration);
 
+  console.log("targetPosition" + targetPosition);
 //vertically scroll run function
-  window.scrollTo(0, run);
+  window.scrollBy(0, run);
 
   //duration = 1500, timeElapsed = how long it takes to get there
   //dont stop animation untill timeElapsed is over duration
   if(timeElapsed < duration) requestAnimationFrame(animation);
+
   }
 //http://gizma.com/easing/
-function ease (t, b, c, d) {
-	return c*t/d + b;
-
-  // distance * timeElapsed / duration (1500) + startPosition  = targetPosition
-
-
+function ease(t, b, c, d) {
+	t /= d/2;
+	if (t < 1) return -c/2 * (Math.sqrt(1 - t*t) - 1) + b;
+	t -= 2;
+	return c/2 * (Math.sqrt(1 - t*t) + 1) + b;
 };
+
+
+
+
+
 
 
   requestAnimationFrame(animation);

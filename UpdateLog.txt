@@ -631,3 +631,14 @@ target position of box 4= 2862.53125
 
 when on another page to home, target position always is in -, close to home
 if trying to scroll below, will scroll back and forth
+
+
+
+
+18:16 10/06/2020
+fixed issue, literally just because of the function not being an easing in/out just an in -_-
+but now it over scrolls a bit? target positions are sometimes larger than theyre supposed to be?
+check distance vars tomorrow 
+scroll to draw idea
+
+
