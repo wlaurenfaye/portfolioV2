@@ -1,6 +1,6 @@
 function smoothScroll(target,duration){
   //what is clicked on
-  var target = document.body.querySelector(target);
+  var target = document.querySelector(target);
 
   //position of target on the window
   var targetPosition = target.getBoundingClientRect().top;
@@ -66,19 +66,19 @@ var projects = document.getElementById('projects');
 var cv = document.getElementById('cv');
 
 home.addEventListener('click', function(){
-  smoothScroll('.box1', 2000);
+  smoothScroll('.box1', 150);
 });
 
 aboutMe.addEventListener('click',function(){
-  smoothScroll('.box2', 2000);
+  smoothScroll('.box2',150);
 });
 
 projects.addEventListener('click', function(){
-  smoothScroll('.box3', 2000);
+  smoothScroll('.box3', 150);
 });
 
 cv.addEventListener('click', function(){
-  smoothScroll('.box4',2000);
+  smoothScroll('.box4',150);
 
 });
 

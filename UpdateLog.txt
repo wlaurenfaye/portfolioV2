@@ -641,4 +641,13 @@ but now it over scrolls a bit? target positions are sometimes larger than theyre
 check distance vars tomorrow 
 scroll to draw idea
 
+12:24 11/06/2020
+was overscrolling because of the if(timeElapsed < duration) requestAnimationFrame(animation); statement, time elapsed was almost always smaller than duration as the duration was set too long
+set duration really lower now looks better and doesnt overscroll 
+
+--- definitions ----
+querySelector() Method: gets the first element in the document with the same class as the perimeter target
+getBoundingClientRect(): returns the size of an element and its position reletive to the screen can have .top/.bottom etc
+
+
 
