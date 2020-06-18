@@ -152,12 +152,30 @@ li:hover{
     transform: translateX(0px);
   }
 }
-.section1{
-
+h1 {
+  font-size: 2rem;
+  color: white;
 }
-.section2{
+.typing {
 
+  position: fixed;
+  max-width: 35%;
 }
-.section3 {
-
+.typing::after{
+  content: "";
+  
+  height: 70%;
+  width: 1px;
+  top: 9px;
+  border-right: 3px solid white;
+  right: -5px;
+  animation: blink 1s infinite ease;
+}
+@keyframes blink {
+  0%{
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

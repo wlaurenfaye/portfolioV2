@@ -106,3 +106,45 @@ const navSlide= () => {
   }
 
 navSlide();
+
+//TYPEWRITE
+const texts = ['My name is Lauren Faye Williams, Welcome to my portfolio.'];
+
+//each word in the array
+let count = 0;
+
+//each letter of the word
+let index = 0;
+
+//text that is currents selected (changes, 0 , 1 , 2)
+let currentText = '';
+
+//individual letters added
+let letter ='';
+
+(function type(){
+
+// if word = the length of the texts (3) reset back to 0
+if (count === texts.length){
+  count=0;
+}
+
+// current text is the ammount of words in the texts to be increased by one later
+currentText = texts[count];
+
+//letter is whatever text is selected incremented by one letter each time
+letter = currentText.slice(0, ++index);
+
+
+//select class adds each letter into the h1 element with the class
+document.querySelector('.typing').innerText = letter;
+
+//carry on incrementing if current word length is the same as the selected word then reset to 0
+if (letter.length === currentText.length){
+  count++;
+}
+//how quick it runs
+setTimeout(type, 200);
+
+
+}());

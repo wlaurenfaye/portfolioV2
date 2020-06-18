@@ -650,4 +650,8 @@ querySelector() Method: gets the first element in the document with the same cla
 getBoundingClientRect(): returns the size of an element and its position reletive to the screen can have .top/.bottom etc
 
 
+12:48 18/06/2020
+got typwriting working on index
+started designing logo
+
 
