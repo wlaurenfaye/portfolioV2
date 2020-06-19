@@ -27,7 +27,6 @@ body {
 }
 .box2{
   height: 100vh;
-  display: flex;
   background:  #E1B378;
   text-decoration: none;
   justify-content: center;
@@ -137,6 +136,13 @@ li:hover{
     display:block;
   }
 
+  .mySlides div1 {
+    min-width: 28%;
+    display: flex;
+    position: absolute;
+
+  }
+
 }
 .nav-active {
   transform: translateX(0%);
@@ -157,13 +163,11 @@ h1 {
   color: white;
 }
 .typing {
-
-  position: fixed;
   max-width: 35%;
 }
 .typing::after{
   content: "";
-  
+
   height: 70%;
   width: 1px;
   top: 9px;
@@ -178,4 +182,34 @@ h1 {
   100% {
     opacity: 1;
   }
+}
+.div1, .div2 , .div3 {
+  height: 32%;
+  width: 28%;
+  background-color: lightpink;
+  border: 1px, solid, pink;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.sliderContainer{
+  max-width: 1700px;
+  text-align: center;
+  height: 100vh;
+}
+.div1 {
+  background-image: url("images/cryingPeach.gif");
+  background-position: center;
+  background-size: cover;
+}
+.div2 {
+  background-image: url("images/me1.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.div3 {
+  background-image: url("images/pc.jpg");
+  background-position: center;
+  background-size: cover;
 }

@@ -654,4 +654,7 @@ getBoundingClientRect(): returns the size of an element and its position reletiv
 got typwriting working on index
 started designing logo
 
+14:43 19/06/2020
+started photoslider tutorial
+
 
