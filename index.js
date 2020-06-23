@@ -125,14 +125,30 @@ setTimeout(type, 100);
 
 }());
 
-const showSlides = () => {
+
+
+//IMAGE SLIDER
+
+
+let slideIndex = 1;
+const showSlides = (n) => {
   const slides = document.getElementsByClassName("mySlides");
+
+  //if current slide is bigger than 3 (ammount of slides), go back to slide 1
+  if (n > slides.length){
+    slideIndex = 1;
+  }
   //starts at first slide in array (i=0=div1), then increments till 1, but stops at 2
   for(let i=0; i < slides.length; i++) {
 
     slides[i].style.display="none";
 
   }
-  slides[0].style.display="block";
+  slides[slideIndex - 1].style.display="block";
 }
-showSlides();
+
+const plusSlides = (n) => {
+  //adding one to the current index
+  showSlides(slideIndex = slideIndex + n);//2
+};
+showSlides(slideIndex);

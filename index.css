@@ -72,6 +72,7 @@ nav  {
   padding-top: 5px;
   position: sticky;
   top: 0;
+  z-index: 5;
 }
 nav a {
   text-decoration: none;
@@ -194,9 +195,10 @@ h1 {
   margin-right: auto;
 }
 .sliderContainer{
-  max-width: 1700px;
+  max-width: 2000px;
   text-align: center;
-  height: 100vh;
+  position: relative;
+  width:100%;
 }
 .div1 {
   background-image: url("images/cryingPeach.gif");
@@ -212,4 +214,34 @@ h1 {
   background-image: url("images/pc.jpg");
   background-position: center;
   background-size: cover;
+}
+
+
+#prev , #next {
+  cursor: pointer;
+  position: absolute;
+  width: auto;
+  transition: background-color 0.8s ease-in-out;
+  padding: 1rem;
+  margin-top: -22px;
+  top: 50%;
+
+
+
+
+}
+#prev {
+  left: 0;
+  border-radius: 0 3px 3px 0;
+}
+#next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+#prev:hover , #next:hover{
+  background-color: #EC799A;
+  background-position: center;
+
+
 }

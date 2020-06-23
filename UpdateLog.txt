@@ -657,4 +657,7 @@ started designing logo
 14:43 19/06/2020
 started photoslider tutorial
 
+11:58 23/06/2020
+added arrows and styled, linked to js, do prev buttons next sesh
+
 
