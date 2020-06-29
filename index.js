@@ -133,22 +133,36 @@ setTimeout(type, 100);
 let slideIndex = 1;
 const showSlides = (n) => {
   const slides = document.getElementsByClassName("mySlides");
+  const dots = document.getElementsByClassName("dot");
 
   //if current slide is bigger than 3 (ammount of slides), go back to slide 1
   if (n > slides.length){
     slideIndex = 1;
   }
+  //if current slide selection is smaller than first slide, slide index = amount of slides
+  if (n < 1){
+    slideIndex = slides.length;
+  }
   //starts at first slide in array (i=0=div1), then increments till 1, but stops at 2
   for(let i=0; i < slides.length; i++) {
-
     slides[i].style.display="none";
-
   }
+
+for (let i = 0; i<dots.length; i++) {
+  if (dots[i].classList.contains("active")){
+    dots[i].classList.remove("active");
+  }
+}
   slides[slideIndex - 1].style.display="block";
+  dots[slideIndex - 1].classList.add("active");
 }
 
 const plusSlides = (n) => {
   //adding one to the current index
   showSlides(slideIndex = slideIndex + n);//2
 };
+
+const currentSlide = (n) => {
+  showSlides(slideIndex = n);
+}
 showSlides(slideIndex);

@@ -36,8 +36,6 @@ body {
 .box2 a {
   text-decoration: none;
   color: white;
-
-
 }
 .box3{
   height: 100vh;
@@ -88,7 +86,6 @@ nav a {
     margin-top: 2px;
     font-size: 2.5vh;
     }
-
 
 li:hover{
   background-color: #4D8963
@@ -141,9 +138,7 @@ li:hover{
     min-width: 28%;
     display: flex;
     position: absolute;
-
   }
-
 }
 .nav-active {
   transform: translateX(0%);
@@ -193,6 +188,8 @@ h1 {
   margin-top: 10px;
   margin-left: auto;
   margin-right: auto;
+  background-position: center;
+  background-size: cover;
 }
 .sliderContainer{
   max-width: 2000px;
@@ -202,20 +199,16 @@ h1 {
 }
 .div1 {
   background-image: url("images/cryingPeach.gif");
-  background-position: center;
-  background-size: cover;
+
 }
 .div2 {
   background-image: url("images/me1.jpg");
-  background-position: center;
-  background-size: cover;
+
 }
 .div3 {
   background-image: url("images/pc.jpg");
-  background-position: center;
-  background-size: cover;
-}
 
+}
 
 #prev , #next {
   cursor: pointer;
@@ -225,11 +218,8 @@ h1 {
   padding: 1rem;
   margin-top: -22px;
   top: 50%;
-
-
-
-
 }
+
 #prev {
   left: 0;
   border-radius: 0 3px 3px 0;
@@ -240,8 +230,34 @@ h1 {
 }
 
 #prev:hover , #next:hover{
-  background-color: #EC799A;
+  background-color: #69A583;
   background-position: center;
 
+}
+
+.dot {
+  cursor: pointer;
+  height: 10px;
+  width: 10px;
+  background: white;
+  border-radius: 50%;
+  display: inline-block;
+  margin-top: 20px;
+  transition: background-color 0.8s ease-in-out;
+
+}
+.dot:hover, .active {
+  background-color: #69A583;
+}
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration:1.5s;
+  animation-name: myFade;
+  animation-duration: 1.5s;
+
+}
+@keyframes myFade {
+  from {opacity: -0.4}
+  to {opacity: 1}
 
 }

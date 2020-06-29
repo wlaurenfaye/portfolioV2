@@ -660,4 +660,5 @@ started photoslider tutorial
 11:58 23/06/2020
 added arrows and styled, linked to js, do prev buttons next sesh
 
-
+17:21 29/06/2020
+did prev button, added little circles, transitions, linked to js
