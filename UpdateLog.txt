@@ -662,3 +662,5 @@ added arrows and styled, linked to js, do prev buttons next sesh
 
 17:21 29/06/2020
 did prev button, added little circles, transitions, linked to js
+15:40 01/07/2020
+CSS styling photo scroller
