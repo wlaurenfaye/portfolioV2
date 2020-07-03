@@ -23,7 +23,7 @@ body {
 }
 .box1 a {
   text-decoration: none;
-  color: white;
+  color: #fefefa;
 }
 .box2{
   height: 100vh;
@@ -35,7 +35,7 @@ body {
 }
 .box2 a {
   text-decoration: none;
-  color: white;
+  color: #fefefa;
 }
 .box3{
   height: 100vh;
@@ -47,7 +47,7 @@ body {
 }
 .box3 a {
   text-decoration: none;
-  color: white;
+  color: #fefefa;
 }
 .box4{
   height: 100vh;
@@ -59,7 +59,7 @@ body {
 }
 .box4 a {
   text-decoration: none;
-  color: white;
+  color: #fefefa;
 }
 
 nav  {
@@ -74,7 +74,7 @@ nav  {
 }
 nav a {
   text-decoration: none;
-  color: white;
+  color: #fefefa;
 }
 .nav-links{
     display: flex;
@@ -92,7 +92,7 @@ li:hover{
 }
 
 .logo {
-  color: white;
+  color: #fefefa;
   text-transform: uppercase;
   letter-spacing: 3px;
   float: left;
@@ -264,4 +264,49 @@ h1 {
 }
 .dotContainer{
   top: 0;
+}
+
+.calculatorContainer {
+  background-color: #69A583;
+  border-radius: 5%;
+  width: 70vh;
+  height: 80vh;
+  text-align: -webkit-center;
+}
+
+.display {
+  display: block;
+  border-radius: 5%;
+  width: 60vh;
+  height: 15vh;
+  background-color: #fefefa;
+  margin-top: 15px;
+}
+
+.buttonContainer{
+
+}
+.row1,.row2,.row3,.row4{
+  padding: 2rem;
+
+
+}
+button {
+    background-color: #fefefa;
+      height: 4rem;
+      width: 5rem;
+      cursor: pointer;
+      border-radius: 10%;
+      font-size: 2rem;
+      border-style: none;
+
+}
+button:active{
+  border-style: dashed;
+}
+.column {
+  margin-left: 35px;
+}
+.row5 {
+  padding: 3rem;
 }
