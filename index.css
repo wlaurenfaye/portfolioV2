@@ -270,17 +270,18 @@ h1 {
   background-color: #69A583;
   border-radius: 5%;
   width: 70vh;
-  height: 80vh;
+  height: 85vh;
   text-align: -webkit-center;
 }
 
-.display {
+#display {
   display: block;
   border-radius: 5%;
   width: 60vh;
   height: 15vh;
   background-color: #fefefa;
   margin-top: 15px;
+  padding: 8%;
 }
 
 .buttonContainer{
@@ -308,5 +309,5 @@ button:active{
   margin-left: 35px;
 }
 .row5 {
-  padding: 3rem;
+  padding: 1rem;
 }

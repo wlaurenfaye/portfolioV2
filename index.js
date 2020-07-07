@@ -166,3 +166,75 @@ const currentSlide = (n) => {
   showSlides(slideIndex = n);
 }
 showSlides(slideIndex);
+
+
+
+
+
+//calculator
+var number = document.getElementsByClassName('number');
+
+number[0].addEventListener('click', calculate);
+number[1].addEventListener('click', calculate);
+number[2].addEventListener('click', calculate);
+number[3].addEventListener('click', calculate);
+number[4].addEventListener('click', calculate);
+number[5].addEventListener('click', calculate);
+number[6].addEventListener('click', calculate);
+number[7].addEventListener('click', calculate);
+number[8].addEventListener('click', calculate);
+number[9].addEventListener('click', calculate);
+number[10].addEventListener('click', calculate);
+number[11].addEventListener('click', calculate);
+number[12].addEventListener('click', calculate);
+number[13].addEventListener('click', calculate);
+number[14].addEventListener('click', calculate);
+number[15].addEventListener('click', calculate);
+
+
+function calculate(v){
+  var value = v.target.value;
+  var display = document.getElementById('display');
+
+  display.innerHTML = value;
+
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+;

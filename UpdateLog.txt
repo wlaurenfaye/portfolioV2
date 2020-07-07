@@ -667,3 +667,9 @@ CSS styling photo scroller
 
 13:19 03/07/2020
 started calculator js project
+
+18:02 07/07/2020
+got js to print values
+
+
+
