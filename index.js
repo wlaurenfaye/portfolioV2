@@ -172,36 +172,151 @@ showSlides(slideIndex);
 
 
 //calculator
-var number = document.getElementsByClassName('number');
-
-number[0].addEventListener('click', calculate);
-number[1].addEventListener('click', calculate);
-number[2].addEventListener('click', calculate);
-number[3].addEventListener('click', calculate);
-number[4].addEventListener('click', calculate);
-number[5].addEventListener('click', calculate);
-number[6].addEventListener('click', calculate);
-number[7].addEventListener('click', calculate);
-number[8].addEventListener('click', calculate);
-number[9].addEventListener('click', calculate);
-number[10].addEventListener('click', calculate);
-number[11].addEventListener('click', calculate);
-number[12].addEventListener('click', calculate);
-number[13].addEventListener('click', calculate);
-number[14].addEventListener('click', calculate);
-number[15].addEventListener('click', calculate);
-
-
-function calculate(v){
-  var value = v.target.value;
-  var display = document.getElementById('display');
-
-  display.innerHTML = value;
-
+const calculator = {
+  displayValue: '0',
+  //input/result of operation
+  firstOperand: null,
+  //first input
+  waitingForSecondOperand: false,
+  //ensures second number is inputted
+  operator: null,
+  //=/-+*
 };
 
 
+//If the waitingForSecondOperand property is set to true, the displayValue property is overwritten with the digit that was clicked.
+// ternary operator is used to check if the current value displayed on the calculator is zero. If so, calculator.displayValue is overwritten with whatever digit was clicked. Otherwise, if displayValue is a non-zero number, the digit is appended to it through string concatenation.
+function inputDigit(digit) {
+  const { displayValue, waitingForSecondOperand } = calculator;
 
+  if (waitingForSecondOperand === true) {
+    calculator.displayValue = digit;
+    calculator.waitingForSecondOperand = false;
+  } else {
+    calculator.displayValue = displayValue === '0' ? digit : displayValue + digit;
+  }
+
+  console.log(calculator);
+}
+
+
+//includes() method is used to check if displayValue does not already contain a decimal point. If so, a dot is appended to the number
+function inputDecimal(dot){
+if (calculator.waitingForSecondOperand === true) {
+  calculator.displayValue = '0.'
+  calculator.waitingForSecondOperand = false;
+  return
+}
+
+  // If the `displayValue` property does not contain a decimal point
+  if (!calculator.displayValue.includes(dot)) {
+    // Append the decimal point
+    calculator.displayValue += dot;
+  }
+}
+
+function handleOperator(nextOperator) {
+  // Destructure the properties on the calculator object
+  const { firstOperand, displayValue, operator } = calculator
+  // `parseFloat` converts the string contents of `displayValue`
+  // to a floating-point number
+  const inputValue = parseFloat(displayValue);
+
+//if statement checks if an operator already exists and if waitingForSecondOperand is set to true. If so, the value of the operator property is replaced with the new operator and the function exits so that no calculations are performed
+  if (operator && calculator.waitingForSecondOperand)  {
+  calculator.operator = nextOperator;
+  console.log(calculator);
+  return;
+}
+  // verify that `firstOperand` is null and that the `inputValue`
+ // is not a `NaN` value
+ if (firstOperand === null && !isNaN(inputValue)) {
+   // Update the firstOperand property
+   calculator.firstOperand = inputValue;
+ }
+ //else if checks if the operator property has been assigned an operator. If so, the calculate function is invoked and the result is saved in the result variable.
+//This result is displayed to the user by updating the displayValue property, the value of firstOperand is updated to the result so that it may be used in the next calculator
+ else if (operator) {
+   const result = calculate(firstOperand, inputValue, operator);
+   calculator.displayValue = `${parseFloat(result.toFixed(7))}`;
+   calculator.firstOperand = result;
+ }
+
+ calculator.waitingForSecondOperand = true;
+ calculator.operator = nextOperator;
+ console.log(calculator);
+}
+
+
+
+
+function calculate(firstOperand, secondOperand, operator) {
+  if (operator === '+') {
+    return firstOperand + secondOperand;
+  } else if (operator === '-') {
+    return firstOperand - secondOperand;
+  } else if (operator === '*') {
+    return firstOperand * secondOperand;
+  } else if (operator === '/') {
+    return firstOperand / secondOperand;
+  }
+
+  return secondOperand;
+}
+
+function resetCalculator() {
+  calculator.displayValue = '0';
+  calculator.firstOperand = null;
+  calculator.waitingForSecondOperand = false;
+  calculator.operator = null;
+}
+
+
+
+function updateDisplay() {
+  // select the element with class of `calculator-screen`
+  const display = document.getElementById('display');
+  // update the value of the element with the contents of `displayValue`
+  display.value = calculator.displayValue;
+}
+
+updateDisplay();
+
+
+const keys = document.querySelector('.buttonContainer');
+keys.addEventListener('click', (event) => {
+  // Access the clicked element
+  const { target } = event;
+  const { value } = target;
+  // Check if the clicked element is a button.
+  // If not, exit from the function
+  if (!target.matches('button')) {
+    return;
+  }
+
+  switch (value) {
+   case '+':
+   case '-':
+   case '*':
+   case '/':
+   case '=':
+     handleOperator(value);
+     break;
+   case '.':
+     inputDecimal(value);
+     break;
+   case 'clear':
+     resetCalculator();
+     break;
+   default:
+     // check if the key is an integer
+     if (Number.isInteger(parseFloat(value))) {
+       inputDigit(value);
+     }
+ }
+
+ updateDisplay();
+});
 
 
 

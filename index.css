@@ -268,7 +268,7 @@ h1 {
 
 .calculatorContainer {
   background-color: #69A583;
-  border-radius: 5%;
+  border-radius: 2%;
   width: 70vh;
   height: 85vh;
   text-align: -webkit-center;
@@ -282,6 +282,7 @@ h1 {
   background-color: #fefefa;
   margin-top: 15px;
   padding: 8%;
+  font-size: 2rem;
 }
 
 .buttonContainer{
